@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>vZHU RVM Reference</title>
+</head>
+<body>
+
+<h2><img src="images/zhu-logo.png" style="float: left; width: 100px; margin-right: 10px; border-radius: 10px;">RVM Reference</h2>
+<p style="font-style: italic; font-size: smaller; margin-top: -15px;">Updated: July 31, 2024
+<br>To recall/hide maps in STARS: <span class="code">CTRL+F2 > type desired map # > ENTER</span>
+
+<p><input type="text" class="search" id="searchBox" placeholder="Search...">
+<button class="search" id="searchBox" onclick="searchFunction()">Go</button>
+
+<button class="collapsible"><span class="arrow">►</span> I90 - Houston TRACON</button>
+    <div class="content">
+        <p>Many of the radar vector maps (RVMs) rely on a unique naming style due to the large number of RVMs the I90 TRACON has stored in their database.
+            <br>A few tips to better understand what maps contain and help find what you are looking for:
+            <ul>
+                <li>I90 maps and map names are often specific to what flow both IAH and HOU are actively using as boundaries change based on which combination of operations are active at both airports.</li>
+                <li>Position-specific maps outline the associated position's delegated airspace for the applicable IAH/HOU flow selected. (EAST/WEST is utilized for the late-night IAH flow.)</li>
+                <li>Maps containing “ALT” mean “Alternate” and are alternate versions of their accompanying map.</li>
+            </ul>
+        </p>
+
+        <h3>General Maps</h3>
+            <table>
+                <thead>
+                    <tr><th>Category</th><th>Map #</th><th>Short Name</th><th>Long Name</th><th>Brite Group</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td rowspan="14">General</td><td>1</td><td>BASE</td><td>I90 BASE MAP</td><td>A</td></tr>
+                    <tr><td>2</td><td>CLEAN</td><td>I90 CLEAN BASE MAP</td><td>A</td></tr>
+                    <tr><td>3</td><td>E TICK</td><td>EAST FLOW SECTOR MARKINGS</td><td>A</td></tr>
+                    <tr><td>4</td><td>W TICK</td><td>WEST FLOW SECTOR MARKINGS</td><td>A</td></tr>
+                    <tr><td>6</td><td>ARM BYY</td><td>ARM BYY SHELF</td><td>A</td></tr>
+                    <tr><td>7</td><td>BRAVO</td><td>I90 CLASS B</td><td>B</td></tr>
+                    <tr><td>8</td><td>CLASS D</td><td>CLASS D AIRPORTS</td><td>B</td></tr>
+                    <tr><td>9</td><td>COUNTY</td><td>I90 COUNTIES</td><td>B</td></tr>
+                    <tr><td>10</td><td>STADIUM</td><td>I90 STADIUMS</td><td>B</td></tr>
+                    <tr><td>11</td><td>VFR</td><td>I90 ROADS</td><td>B</td></tr>
+                    <tr><td>12</td><td>EOR</td><td>EAST END OF ARRIVALS EAST FLOW</td><td>A</td></tr>
+                    <tr><td>13</td><td>EOR</td><td>WEST END OF ARRIVALS WEST FLOW</td><td>A</td></tr>
+                    <tr><td>43</td><td>KCXO D</td><td>CONROE CLASS D</td><td>B</td></tr>
+                    <tr><td>44</td><td>KTME D</td><td>TME CLASS D AIRSPACE</td><td>B</td></tr>
+                    <tr><td rowspan="2">MVA</td><td>5</td><td>3NM MVA</td><td>MVA FUS 3</td><td>B</td></tr>
+                    <tr><td>45</td><td>5NM MVA</td><td>MVA FUS 5</td><td>B</td></tr>
+                    <tr><td rowspan="4">STAR<br>Transitions</td><td>49</td><td>E ILS S</td><td>EAST FLOW ILS TRANSITIONS STARS</td><td>A
+                    <tr><td>50</td><td>E ILS L</td><td>EAST FLOW ILS TRANSITIONS LINES</td><td>A</td>
+                    <tr><td>51</td><td>W ILS S</td><td>WEST FLOW ILS TRANSITIONS STARS</td><td>A</td>
+                    <tr><td>52</td><td>W ILS L</td><td>WEST FLOW ILS TRANSITIONS LINES</td><td>A</td></tr>
+                    <tr><td rowspan="4">RNP<br>Approach</td><td>53</td><td>E RNPF</td><td>EAST FLOW RNP FIXES</td><td>A
+                    <tr><td>54</td><td>E RNP</td><td>EAST FLOW RNP LINES</td><td>A
+                    <tr><td>55</td><td>W RNPF</td><td>WEST FLOW RNP FIXES</td><td>A
+                    <tr><td>56</td><td>W RNP</td><td>WEST FLOW RNP LINES</td><td>A
+                </tbody>
+            </table>
+        <h3>Arrival</h3>
+        <h3>Departure</h3>
+        <h3>Final</h3>
+            <table>
+                <thead>
+                    <tr><th>Category</th><th>Map #</th><th>Short Name</th><th>Long Name</th><th>Brite Group</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td rowspan="14">Houston<br>Final<br>(A/I/O)</td><td>24</td><td>IAH E</td><td>IAH FINAL EAST FLOW</td><td>A</td></tr>
+                    <tr><td>25</td><td>IAH E A</td><td>IAH FINAL EAST FLOW ALT</td><td>A</td></tr>
+                    <tr><td>26</td><td>IAH W</td><td>IAH FINAL WEST FLOW</td><td>A</td></tr>
+                    <tr><td>27</td><td>IAH W A</td><td>IAH FINAL WEST FLOW ALT</td><td>A</td></tr>
+                    <tr><td>28</td><td>IAH EW</td><td>IAH FINAL E/W FLOW</td><td>A</td></tr>
+                    <tr><td>29</td><td>IAH EW A</td><td>IAH FINAL E/W FLOW ALT</td><td>A</td></tr>
+                    <tr><td>30</td><td>IAH 15</td><td>IAH 15 FLOW</td><td>A</td></tr>
+                    <tr><td>31</td><td>IAH 15 A</td><td>IAH 15 FLOW ALT</td><td>A</td></tr>
+                    <tr><td>32</td><td>IAH 33</td><td>IAH 33 FLOW</td><td>A</td></tr>
+                    <tr><td>33</td><td>IAH 33 A</td><td>IAH 33 FLOW ALT</td><td>A</td></tr>
+                    <tr><td>288</td><td>WZONESA</td><td>IAH WEST FINAL ZONES</td><td>A</td></tr>
+                    <tr><td>289</td><td>WZONESB</td><td>IAH WEST FINAL ZONES</td><td>B</td></tr>
+                    <tr><td>290</td><td>EZONESA</td><td>IAH EAST FINAL ZONES</td><td>A</td></tr>
+                    <tr><td>291</td><td>EZONESB</td><td>IAH EAST FINAL ZONES</td><td>B</td></tr>
+                    <tr><td rowspan="10">Hobby<br>Final<br>(H)</td><td>14</td><td>HOU_22</td><td>HOU FINAL 22</td><td>A</td></tr>
+                    <tr><td>15</td><td>HOU 22 A</td><td>HOU FINAL 22 ALT</td><td>A</td></tr>
+                    <tr><td>16</td><td>HOU_31</td><td>HOU FINAL 31</td><td>A</td></tr>
+                    <tr><td>17</td><td>HOU 31 A</td><td>HOU FINAL 31 ALT</td><td>A</td></tr>
+                    <tr><td>18</td><td>HOU_4</td><td>HOU FINAL 4</td><td>A</td></tr>
+                    <tr><td>19</td><td>HOU 4 A</td><td>HOU FINAL 4 ALT</td><td>A</td></tr>
+                    <tr><td>20</td><td>HOU 13E</td><td>HOU FINAL IAH EAST HOU 13</td><td>A</td></tr>
+                    <tr><td>21</td><td>HOU 13E A</td><td>HOU FINAL IAH EAST HOU 13 ALT</td><td>A</td></tr>
+                    <tr><td>22</td><td>HOU 13W</td><td>HOU FINAL WEST/15/33 HOU 13</td><td>A</td></tr>
+                    <tr><td>23</td><td>HOU 13W A</td><td>HOU FINAL WEST/15/33 HOU 13 ALT</td><td>A</td></tr>
+                    <tr><td>DWH</td><td>48</td><td>DWH F</td><td>DWH FINAL</td><td>A</td></tr>
+                </tbody>
+            </table>
+        <h3>Satellite</h3>
+        <h3>SIDs & STARs</h3>
+        <h3>Helicopter, Airshow, and PAJA</h3>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var coll = document.getElementsByClassName('collapsible');
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].addEventListener('click', function() {
+                this.classList.toggle('active');
+                var content = this.nextElementSibling;
+                if (content.style.display === 'block') {
+                    content.style.display = 'none';
+                } else {
+                    content.style.display = 'block';
+                }
+            });
+        }
+
+        var searchInput = document.getElementById('searchBox');
+        searchInput.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                searchFunction();
+            }
+        });
+    });
+
+    function searchFunction() {
+        var input = document.getElementById('searchBox');
+        var filter = input.value.toLowerCase();
+        var coll = document.getElementsByClassName('collapsible');
+        var contentDivs = document.getElementsByClassName('content');
+
+        // Collapse all sections and remove previous highlights
+        for (var i = 0; i < coll.length; i++) {
+            coll[i].classList.remove('active');
+            var content = coll[i].nextElementSibling;
+            content.style.display = 'none';
+            removeHighlights(content);
+        }
+
+        if (filter) {
+            // Highlight new search terms and expand sections with matches
+            for (var i = 0; i < contentDivs.length; i++) {
+                if (highlightText(contentDivs[i], filter)) {
+                    // If a match is found, expand the collapsible section
+                    var button = contentDivs[i].previousElementSibling;
+                    button.classList.add('active');
+                    contentDivs[i].style.display = 'block';
+                }
+            }
+        }
+    }
+
+    function highlightText(element, query) {
+        var textNodes = getTextNodes(element);
+        var found = false;
+        textNodes.forEach(function(node) {
+            var value = node.nodeValue.toLowerCase();
+            var startIndex = value.indexOf(query);
+            if (startIndex !== -1) {
+                found = true;
+                var span = document.createElement('span');
+                span.className = 'highlight';
+                var range = document.createRange();
+                range.setStart(node, startIndex);
+                range.setEnd(node, startIndex + query.length);
+                range.surroundContents(span);
+            }
+        });
+        return found;
+    }
+
+    function removeHighlights(element) {
+        var highlightedElements = element.querySelectorAll('.highlight');
+        highlightedElements.forEach(function(highlight) {
+            var parent = highlight.parentNode;
+            parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+            parent.normalize();
+        });
+    }
+
+    function getTextNodes(element) {
+        var textNodes = [];
+        var walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+        var node;
+        while (node = walker.nextNode()) {
+            textNodes.push(node);
+        }
+        return textNodes;
+    }
+</script>
+
+
+</body>
+</html>
