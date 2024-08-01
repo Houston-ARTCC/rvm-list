@@ -83,6 +83,8 @@ thead th {
 tbody td {
     border: 1px solid #18181b;
     vertical-align: middle;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 tbody tr:nth-child(odd) {
