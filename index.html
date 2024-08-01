@@ -8,14 +8,17 @@
 </head>
 <body>
 
-<img src="images/zhu-logo.png" style="float: left; width: 100px; margin-right: 10px; border-radius: 10px;">
-<h2>RVM Reference</h2>
-<p>Updated: July 31, 2024
-<br>To recall/hide maps in STARS: <span class="code">CTRL+F2 > type desired map # > ENTER</span></p>
+<div class="header">
+    <img src="images/zhu-logo.png" style="float: left; width: 100px; margin-right: 10px; border-radius: 10px;">
+    <h2 style="margin-top: 0; margin-bottom: 0;">RVM Reference</h2>
+    <p>Updated: July 31, 2024
+    <br>To recall/hide maps in STARS: <span class="code">CTRL+F2 > type desired map # > ENTER</span></p>
 
-<p><input type="text" class="search" id="searchBox" placeholder="Search...">
-<button class="search" id="searchBox" onclick="searchFunction()">Go</button></p>
+    <p><input type="text" class="search" id="searchBox" placeholder="I90_D, MVA, Final, etc...">
+    <button class="searchgo" id="searchBox" onclick="searchFunction()">Search</button><button class="searchgo" id="searchBox" onclick="resetPage()">Reset</button></p>
+</div>
 
+<div class="tables">
 <button class="collapsible"><span class="arrow">►</span> AUS - Austin</button>
     <div class="content">
         <table>
@@ -364,29 +367,531 @@
 
 <button class="collapsible"><span class="arrow">►</span> I90 - Houston Approach</button>
     <div class="content">
+        <div style="font-size: small; line-height: 1.4em;">
+        <p>Many of the radar vector maps in I90 rely on a unique naming style due to the large number of RVMs the I90 TRACON has stored in their database. A few tips below are provided to better understand what maps contain and help find what you are looking for.
+            <ul>
+                <li>I90 maps and map names are often specific to what flow both IAH and HOU are actively using as boundaries change based on which combination of operations are active at both airports.</li>
+                <li>Position-specific maps outline the associated position's delegated airspace for the applicable IAH/HOU flow selected. (EAST/WEST is utilized for the late-night IAH flow.)</li>
+                <li>Maps containing "A" or “ALT” mean “Alternate” and are alternate versions of their accompanying map:</li>
+                    <ul>
+                        <li>Final positions: Maps often utilize a different line marking style for final sectors.</li>
+                        <li>Position-specific maps: Delegated airspaces with base and ceiling altitudes</li>
+                    </ul>
+            </ul>
+        </div>
+        </p>
         <button class="collapsible"><span class="arrow">►</span> General Maps</button>
             <div class="content">
-                
+                <p>General I90 TRACON</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>BASE</td><td>I90 BASE MAP</td><td>A</td></tr>
+                            <tr><td>2</td><td>CLEAN</td><td>I90 CLEAN BASE MAP</td><td>A</td></tr>
+                            <tr><td>3</td><td>E TICK</td><td>EAST FLOW SECTOR MARKINGS</td><td>A</td></tr>
+                            <tr><td>4</td><td>W TICK</td><td>WEST FLOW SECTOR MARKINGS</td><td>A</td></tr>
+                            <tr><td>6</td><td>ARM BYY</td><td>ARM BYY SHELF</td><td>A</td></tr>
+                            <tr><td>7</td><td>BRAVO</td><td>I90 CLASS B</td><td>B</td></tr>
+                            <tr><td>8</td><td>CLASS D</td><td>CLASS D AIRPORTS</td><td>B</td></tr>
+                            <tr><td>9</td><td>COUNTY</td><td>I90 COUNTIES</td><td>B</td></tr>
+                            <tr><td>10</td><td>STADIUM</td><td>I90 STADIUMS</td><td>B</td></tr>
+                            <tr><td>11</td><td>VFR</td><td>I90 ROADS</td><td>B</td></tr>
+                            <tr><td>12</td><td>EOR</td><td>EAST END OF ARRIVALS EAST FLOW</td><td>A</td></tr>
+                            <tr><td>13</td><td>EOR</td><td>WEST END OF ARRIVALS WEST FLOW</td><td>A</td></tr>
+                            <tr><td>43</td><td>KCXO D</td><td>CONROE CLASS D</td><td>B</td></tr>
+                            <tr><td>44</td><td>KTME D</td><td>TME CLASS D AIRSPACE</td><td>B</td></tr>
+                            </tbody>
+                    </table>
+                <p>MVA</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>5</td><td>3NM MVA</td><td>MVA FUS 3</td><td>B</td></tr>
+                            <tr><td>45</td><td>5NM MVA</td><td>MVA FUS 5</td><td>B</td></tr>
+                        </tbody>
+                    </table>
+                <p>STAR Transitions</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>49</td><td>E ILS S</td><td>EAST FLOW ILS TRANSITIONS STARS</td><td>A</td></tr>
+                            <tr><td>50</td><td>E ILS L</td><td>EAST FLOW ILS TRANSITIONS LINES</td><td>A</td></tr>
+                            <tr><td>51</td><td>W ILS S</td><td>WEST FLOW ILS TRANSITIONS STARS</td><td>A</td></tr>
+                            <tr><td>52</td><td>W ILS L</td><td>WEST FLOW ILS TRANSITIONS LINES</td><td>A</td></tr>
+                        </tbody>
+                    </table>
+                <p>RNP Approach</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>53</td><td>E RNPF</td><td>EAST FLOW RNP FIXES</td><td>A</td></tr>
+                            <tr><td>54</td><td>E RNP</td><td>EAST FLOW RNP LINES</td><td>A</td></tr>
+                            <tr><td>55</td><td>W RNPF</td><td>WEST FLOW RNP FIXES</td><td>A</td></tr>
+                            <tr><td>56</td><td>W RNP</td><td>WEST FLOW RNP LINES</td><td>A</td></tr>
+                        </tbody>
+                    </table>                        
             </div>
 
             <button class="collapsible"><span class="arrow">►</span> Arrival</button>
             <div class="content">
+                <button class="collapsible"><span class="arrow">►</span> West Arrival (I90_N)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>133</td><td>I90007</td><td>IAH 15</td><td>B</td></tr>
+                            <tr><td>134</td><td>I90008</td><td>IAH 15 WITH ALT</td><td>B</td></tr>
+                            <tr><td>135</td><td>I90009</td><td>IAH 33</td><td>B</td></tr>
+                            <tr><td>136</td><td>I90010</td><td>IAH 33 WITH ALT</td><td>B</td></tr>
+                            <tr><td>137</td><td>I90011</td><td>IAH EAST HOU ALL</td><td>B</td></tr>
+                            <tr><td>138</td><td>I90012</td><td>IAH EAST HOU ALL WITH ALT</td><td>B</td></tr>
+                            <tr><td>139</td><td>I90013</td><td>IAH EAST AND WEST</td><td>B</td></tr>
+                            <tr><td>140</td><td>I90014</td><td>IAH EAST AND WEST WITH ALT</td><td>B</td></tr>
+                            <tr><td>141</td><td>I90015</td><td>IAH WEST AND 15 HOU ALL</td><td>B</td></tr>
+                            <tr><td>142</td><td>I90016</td><td>IAH WEST AND 15 HOU ALL WITH ALT</td><td>B</td></tr>
+                        </tbody>
+                    </table>
+                </div>
 
-            </div>
+                <button class="collapsible"><span class="arrow">►</span> Eagle Lake Arrival (I90_X)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>143</td><td>I90149</td><td>IAH 15</td><td>B</td></tr>
+                            <tr><td>144</td><td>I90150</td><td>IAH 15 ALT</td><td>B</td></tr>
+                            <tr><td>145</td><td>I90151</td><td>IAH 33</td><td>B</td></tr>
+                            <tr><td>146</td><td>I90152</td><td>IAH 33 ALT</td><td>B</td></tr>
+                            <tr><td>147</td><td>I90153</td><td>IAH EAST E/W HOU 4</td><td>B</td></tr>
+                            <tr><td>148</td><td>I90154</td><td>IAH EAST E/W HOU 4 ALT</td><td>B</td></tr>
+                            <tr><td>149</td><td>I90155</td><td>IAH EAST HOU 13</td><td>B</td></tr>
+                            <tr><td>150</td><td>I90156</td><td>IAH EAST HOU 13 ALT</td><td>B</td></tr>
+                            <tr><td>151</td><td>I90157</td><td>IAH EAST HOU22</td><td>B</td></tr>
+                            <tr><td>152</td><td>I90158</td><td>IAH EAST HOU22 ALT</td><td>B</td></tr>
+                            <tr><td>153</td><td>I90159</td><td>IAH EAST HOU31</td><td>B</td></tr>
+                            <tr><td>154</td><td>I90160</td><td>IAH EAST HOU31 ALT</td><td>B</td></tr>
+                            <tr><td>155</td><td>I90161</td><td>IAH WEST/15 HOU 13</td><td>B</td></tr>
+                            <tr><td>156</td><td>I90162</td><td>IAH WEST/15 HOU 13 ALT</td><td>B</td></tr>
+                            <tr><td>157</td><td>I90163</td><td>IAH WEST/15 HOU 22</td><td>B</td></tr>
+                            <tr><td>158</td><td>I90164</td><td>IAH WEST/15 HOU 22 ALT</td><td>B</td></tr>
+                            <tr><td>159</td><td>I90165</td><td>IAH WEST/15 HOU 31</td><td>B</td></tr>
+                            <tr><td>160</td><td>I90166</td><td>IAH WEST/15 HOU 31 ALT</td><td>B</td></tr>
+                            <tr><td>161</td><td>I90167</td><td>IAH WEST/15 HOU 4</td><td>B</td></tr>
+                            <tr><td>162</td><td>I90168</td><td>IAH WEST/15 HOU 4 ALT</td><td>B</td></tr>
+                        </tbody>
+                    </table>
+                </div>
 
-            <button class="collapsible"><span class="arrow">►</span> Final</button>
-            <div class="content">
+                <button class="collapsible"><span class="arrow">►</span> East Arrival (I90_D)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>168</td><td>I90001</td><td>IAH EAST 15/33 HOU ALL</td><td>B</td></tr>
+                            <tr><td>169</td><td>I90002</td><td>IAH EAST 15/33 HOU ALL WITH ALT</td><td>B</td></tr>
+                            <tr><td>170</td><td>I90003</td><td>IAH EAST AND WEST</td><td>B</td></tr>
+                            <tr><td>171</td><td>I90004</td><td>IAH EAST AND WEST WITH ALT</td><td>B</td></tr>
+                            <tr><td>172</td><td>I90005</td><td>IAH WEST 15 HOU ALL</td><td>B</td></tr>
+                            <tr><td>173</td><td>I90006</td><td>IAH WEST 15 HOU ALL WITH ALT</td><td>B</td></tr>
+                        </tbody>
+                    </table>
+                </div>
 
+                <button class="collapsible"><span class="arrow">►</span> Gulf Arrival (I90_G)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>174</td><td>I90135</td><td>IAH EAST 15/33 HOU 4/13</td><td>B</td></tr>
+                            <tr><td>175</td><td>I90136</td><td>IAH EAST 15/33 HOU 4/13 ALT</td><td>B</td></tr>
+                            <tr><td>176</td><td>I90137</td><td>IAH EAST HOU 22</td><td>B</td></tr>
+                            <tr><td>177</td><td>I90138</td><td>IAH EAST HOU 22 ALT</td><td>B</td></tr>
+                            <tr><td>178</td><td>I90139</td><td>IAH EAST HOU 31</td><td>B</td></tr>
+                            <tr><td>179</td><td>I90140</td><td>IAH EAST HOU 31 ALT</td><td>B</td></tr>
+                            <tr><td>180</td><td>I90141</td><td>IAH WEST/15 E/W HOU 4</td><td>B</td></tr>
+                            <tr><td>181</td><td>I90142</td><td>IAH WEST/15 E/W HOU 4 ALT</td><td>B</td></tr>
+                            <tr><td>182</td><td>I90143</td><td>IAH WEST W/15 HOU 13</td><td>B</td></tr>
+                            <tr><td>183</td><td>I90144</td><td>IAH WEST W/15 HOU 13 ALT</td><td>B</td></tr>
+                            <tr><td>184</td><td>I90145</td><td>IAH WEST W/15 HOU 22</td><td>B</td></tr>
+                            <tr><td>185</td><td>I90146</td><td>IAH WEST W/15 HOU 22 ALT</td><td>B</td></tr>
+                            <tr><td>186</td><td>I90147</td><td>IAH WEST W/15 HOU 31</td><td>B</td></tr>
+                            <tr><td>187</td><td>I90148</td><td>IAH WEST W/15 HOU 31 ALT</td><td>B</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <button class="collapsible"><span class="arrow">►</span> Departure</button>
             <div class="content">
+                <button class="collapsible"><span class="arrow">►</span> Departure North (I90_M)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>57</td><td>I90041</td><td>IAH 15</td><td>B</td></tr>
+                            <tr><td>58</td><td>I90042</td><td>IAH 15 ALT</td><td>B</td></tr>
+                            <tr><td>59</td><td>I90043</td><td>IAH 33</td><td>B</td></tr>
+                            <tr><td>60</td><td>I90044</td><td>IAH 33 ALT</td><td>B</td></tr>
+                            <tr><td>61</td><td>I90045</td><td>IAH EAST HOU ALL</td><td>B</td></tr>
+                            <tr><td>62</td><td>I90046</td><td>IAH EAST HOU ALL ALT</td><td>B</td></tr>
+                            <tr><td>63</td><td>I90049</td><td>WEST HOU ALL</td><td>B</td></tr>
+                            <tr><td>64</td><td>I90050</td><td>WEST HOU ALL ALT</td><td>B</td></tr>
+                            <tr><td>65</td><td>I90047</td><td>IAH EAST/WEST</td><td>B</td></tr>
+                            <tr><td>66</td><td>I90048</td><td>IAH EAST/WEST ALT</td><td>B</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="collapsible"><span class="arrow">►</span> Departure East (I90_E)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>67</td><td>I90027</td><td>IAH 15</td><td>B</td></tr>
+                            <tr><td>68</td><td>I90028</td><td>IAH 15 ALT</td><td>B</td></tr>
+                            <tr><td>69</td><td>I90029</td><td>IAH 33</td><td>B</td></tr>
+                            <tr><td>70</td><td>I90030</td><td>IAH 33 ALT</td><td>B</td></tr>
+                            <tr><td>71</td><td>I90031</td><td>IAH EAST HOU22</td><td>B</td></tr>
+                            <tr><td>72</td><td>I90032</td><td>IAH EAST HOU22 ALT</td><td>B</td></tr>
+                            <tr><td>73</td><td>I90033</td><td>IAH EAST HOU31</td><td>B</td></tr>
+                            <tr><td>74</td><td>I90034</td><td>IAH EAST HOU31 ALT</td><td>B</td></tr>
+                            <tr><td>75</td><td>I90035</td><td>IAH EAST HOU 4/13</td><td>B</td></tr>
+                            <tr><td>76</td><td>I90036</td><td>IAH EAST HOU 4/13 ALT</td><td>B</td></tr>
+                            <tr><td>77</td><td>I90037</td><td>IAH WEST/15 HOU 4/13/31</td><td>B</td></tr>
+                            <tr><td>78</td><td>I90038</td><td>IAH WEST/15 HOU 4/13/31 ALT</td><td>B</td></tr>
+                            <tr><td>79</td><td>I90039</td><td>IAH WEST/15 HOU 22</td><td>B</td></tr>
+                            <tr><td>80</td><td>I90040</td><td>IAH WEST/15 HOU 22 ALT</td><td>B</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="collapsible"><span class="arrow">►</span> Departure South (I90_L)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>81</td><td>I90093</td><td>IAH EAST HOU 22</td><td>B</td></tr>
+                            <tr><td>82</td><td>I90094</td><td>IAH EAST HOU 22 ALT</td><td>B</td></tr>
+                            <tr><td>83</td><td>I90095</td><td>IAH EAST HOU 31</td><td>B</td></tr>
+                            <tr><td>84</td><td>I90096</td><td>IAH EAST HOU 31 ALT</td><td>B</td></tr>
+                            <tr><td>85</td><td>I90097</td><td>IAH EAST 15/33 HOU 13</td><td>B</td></tr>
+                            <tr><td>86</td><td>I90098</td><td>IAH EAST 15/33 HOU 13 ALT</td><td>B</td></tr>
+                            <tr><td>87</td><td>I90099</td><td>IAH EAST HOU 4</td><td>B</td></tr>
+                            <tr><td>88</td><td>I90100</td><td>IAH EAST HOU 4 ALT</td><td>B</td></tr>
+                            <tr><td>89</td><td>I90101</td><td>IAH WEST/15 HOU 4</td><td>B</td></tr>
+                            <tr><td>90</td><td>I90102</td><td>IAH WEST/15 HOU 4 ALT</td><td>B</td></tr>
+                            <tr><td>91</td><td>I90103</td><td>IAH WEST/15 HOU 13</td><td>B</td></tr>
+                            <tr><td>92</td><td>I90104</td><td>IAH WEST/15 HOU 13 ALT</td><td>B</td></tr>
+                            <tr><td>93</td><td>I90105</td><td>IAH WEST/15 HOU 22</td><td>B</td></tr>
+                            <tr><td>94</td><td>I90106</td><td>IAH WEST/15 HOU 22 ALT</td><td>B</td></tr>
+                            <tr><td>95</td><td>I90107</td><td>IAH WEST/15 HOU 31</td><td>B</td></tr>
+                            <tr><td>96</td><td>I90108</td><td>IAH WEST/15 HOU 31 ALT</td><td>B</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="collapsible"><span class="arrow">►</span> Departure South (I90_L)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>97</td><td>I90109</td><td>IAH EAST E/W HOU 4</td><td>B</td></tr>
+                            <tr><td>98</td><td>I90110</td><td>IAH EAST E/W HOU 4 ALT</td><td>B</td></tr>
+                            <tr><td>99</td><td>I90111</td><td>IAH EAST HOU 13</td><td>B</td></tr>
+                            <tr><td>100</td><td>I90112</td><td>IAH EAST HOU 13 ALT</td><td>B</td></tr>
+                            <tr><td>101</td><td>I90113</td><td>IAH EAST HOU 22</td><td>B</td></tr>
+                            <tr><td>102</td><td>I90114</td><td>IAH EAST HOU 22 ALT</td><td>B</td></tr>
+                            <tr><td>103</td><td>I90115</td><td>IAH EAST HOU 31</td><td>B</td></tr>
+                            <tr><td>104</td><td>I90116</td><td>IAH EAST HOU 31 ALT</td><td>B</td></tr>
+                            <tr><td>105</td><td>I90117</td><td>IAH WEST 15/33 HOU 13</td><td>B</td></tr>
+                            <tr><td>106</td><td>I90118</td><td>IAH WEST 15/33 HOU 13 ALT</td><td>B</td></tr>
+                            <tr><td>107</td><td>I90119</td><td>IAH WEST/15 HOU 22</td><td>B</td></tr>
+                            <tr><td>108</td><td>I90120</td><td>IAH WEST/15 HOU 22 ALT</td><td>B</td></tr>
+                            <tr><td>109</td><td>I90121</td><td>IAH WEST/15 HOU 31</td><td>B</td></tr>
+                            <tr><td>110</td><td>I90122</td><td>IAH WEST/15 HOU 31 ALT</td><td>B</td></tr>
+                            <tr><td>111</td><td>I90123</td><td>IAH WEST/15 HOU 4</td><td>B</td></tr>
+                            <tr><td>112</td><td>I90124</td><td>IAH WEST/15 HOU 4 ALT</td><td>B</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <button class="collapsible"><span class="arrow">►</span> Final</button>
+            <div class="content">
+                <button class="collapsible"><span class="arrow">►</span> Houston Final (I90_A, I90_I, I90_O)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>24</td><td>IAH E</td><td>IAH FINAL EAST FLOW</td><td>A</td></tr>
+                            <tr><td>25</td><td>IAH E A</td><td>IAH FINAL EAST FLOW ALT</td><td>A</td></tr>
+                            <tr><td>26</td><td>IAH W</td><td>IAH FINAL WEST FLOW</td><td>A</td></tr>
+                            <tr><td>27</td><td>IAH W A</td><td>IAH FINAL WEST FLOW ALT</td><td>A</td></tr>
+                            <tr><td>28</td><td>IAH EW</td><td>IAH FINAL E/W FLOW</td><td>A</td></tr>
+                            <tr><td>29</td><td>IAH EW A</td><td>IAH FINAL E/W FLOW ALT</td><td>A</td></tr>
+                            <tr><td>30</td><td>IAH 15</td><td>IAH 15 FLOW</td><td>A</td></tr>
+                            <tr><td>31</td><td>IAH 15 A</td><td>IAH 15 FLOW ALT</td><td>A</td></tr>
+                            <tr><td>32</td><td>IAH 33</td><td>IAH 33 FLOW</td><td>A</td></tr>
+                            <tr><td>33</td><td>IAH 33 A</td><td>IAH 33 FLOW ALT</td><td>A</td></tr>
+                            <tr><td>288</td><td>WZONESA</td><td>IAH WEST FINAL ZONES</td><td>A</td></tr>
+                            <tr><td>289</td><td>WZONESB</td><td>IAH WEST FINAL ZONES</td><td>B</td></tr>
+                            <tr><td>290</td><td>EZONESA</td><td>IAH EAST FINAL ZONES</td><td>A</td></tr>
+                            <tr><td>291</td><td>EZONESB</td><td>IAH EAST FINAL ZONES</td><td>B</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="collapsible"><span class="arrow">►</span> Hobby Final (I90_H)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>14</td><td>HOU_22</td><td>HOU FINAL 22</td><td>A</td></tr>
+                            <tr><td>15</td><td>HOU 22 A</td><td>HOU FINAL 22 ALT</td><td>A</td></tr>
+                            <tr><td>16</td><td>HOU_31</td><td>HOU FINAL 31</td><td>A</td></tr>
+                            <tr><td>17</td><td>HOU 31 A</td><td>HOU FINAL 31 ALT</td><td>A</td></tr>
+                            <tr><td>18</td><td>HOU_4</td><td>HOU FINAL 4</td><td>A</td></tr>
+                            <tr><td>19</td><td>HOU 4 A</td><td>HOU FINAL 4 ALT</td><td>A</td></tr>
+                            <tr><td>20</td><td>HOU 13E</td><td>HOU FINAL IAH EAST HOU 13</td><td>A</td></tr>
+                            <tr><td>21</td><td>HOU 13E A</td><td>HOU FINAL IAH EAST HOU 13 ALT</td><td>A</td></tr>
+                            <tr><td>22</td><td>HOU 13W</td><td>HOU FINAL WEST/15/33 HOU 13</td><td>A</td></tr>
+                            <tr><td>23</td><td>HOU 13W A</td><td>HOU FINAL WEST/15/33 HOU 13 ALT</td><td>A</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="collapsible"><span class="arrow">►</span> DWH Final</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>48</td><td>DWH F</td><td>DWH FINAL</td><td>A</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
 
             </div>
 
             <button class="collapsible"><span class="arrow">►</span> Satellite</button>
             <div class="content">
-
+                <button class="collapsible"><span class="arrow">►</span> Tomball Satellite (I90_R)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>113</td><td>I90085</td><td>IAH 15/33</td><td>B</td></tr>
+                            <tr><td>114</td><td>I90086</td><td>IAH 15/33 ALT</td><td>B</td></tr>
+                            <tr><td>115</td><td>I90087</td><td>IAH EAST FLOW</td><td>B</td></tr>
+                            <tr><td>116</td><td>I90088</td><td>IAH EAST FLOW ALT</td><td>B</td></tr>
+                            <tr><td>117</td><td>I90089</td><td>IAH EAST/WEST</td><td>B</td></tr>
+                            <tr><td>118</td><td>I90090</td><td>IAH EAST/WEST ALT</td><td>B</td></tr>
+                            <tr><td>119</td><td>I90091</td><td>IAH WEST FLOW</td><td>B</td></tr>
+                            <tr><td>120</td><td>I90092</td><td>IAH WEST FLOW ALT</td><td>B</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="collapsible"><span class="arrow">►</span> Lake Side Satellite (I90_P)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>121</td><td>I90073</td><td>IAH WEST/15/33 HOU 13</td><td>B</td></tr>
+                            <tr><td>122</td><td>I90074</td><td>IAH WEST/15/33 HOU 13 ALT</td><td>B</td></tr>
+                            <tr><td>123</td><td>I90075</td><td>IAH EAST HOU 4</td><td>B</td></tr>
+                            <tr><td>124</td><td>I90076</td><td>IAH EAST HOU 4 ALT</td><td>B</td></tr>
+                            <tr><td>125</td><td>I90077</td><td>IAH EAST HOU 13</td><td>B</td></tr>
+                            <tr><td>126</td><td>I90078</td><td>IAH EAST HOU 13 ALT</td><td>B</td></tr>
+                            <tr><td>127</td><td>I90079</td><td>IAH EAST HOU 22/31</td><td>B</td></tr>
+                            <tr><td>128</td><td>I90080</td><td>IAH EAST HOU 22/31 ALT</td><td>B</td></tr>
+                            <tr><td>129</td><td>I90081</td><td>IAH WEST/15 HOU 22/31</td><td>B</td></tr>
+                            <tr><td>130</td><td>I90082</td><td>IAH WEST/15 HOU 22/31 ALT</td><td>B</td></tr>
+                            <tr><td>131</td><td>I90083</td><td>IAH WEST/15 HOU 4</td><td>B</td></tr>
+                            <tr><td>132</td><td>I90084</td><td>IAH WEST/15 HOU 4 ALT</td><td>B</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="collapsible"><span class="arrow">►</span> San Jac Satellite (I90_B)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>163</td><td>I90126</td><td>IAH EAST 15/33 HOU 4/13</td><td>B</td></tr>
+                            <tr><td>164</td><td>I90127</td><td>IAH EAST 15/33 HOU 4/13 ALT</td><td>B</td></tr>
+                            <tr><td>165</td><td>I90128</td><td>IAH EAST HOU 22/31</td><td>B</td></tr>
+                            <tr><td>166</td><td>I90129</td><td>IAH EAST HOU 22/31 ALT</td><td>B</td></tr>
+                            <tr><td>167</td><td>I90130</td><td>SANJAC WEST 15 HOU ALL</td><td>B</td></tr>
+                            <tr><td>900</td><td>I90131</td><td>SANJAC WEST 15 HOU ALL ALT</td><td>B</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="collapsible"><span class="arrow">►</span> Beaumont Satellite (I90_J)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>35</td><td>BPT E A</td><td>BPT EAST 15/33 HOU ALL ALT</td><td>A</td></tr>
+                            <tr><td>36</td><td>BPT W</td><td>BPT WEST/15 HOU ALL</td><td>A</td></tr>
+                            <tr><td>37</td><td>BPT W A</td><td>BPT WEST/15 HOU ALL ALT</td><td>A</td></tr>
+                            <tr><td>38</td><td>BPT TRSA</td><td>BPT TRSA</td><td>B</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="collapsible"><span class="arrow">►</span> College/Industry Satellite (I90_U/I90_Z)</button>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>39</td><td>CLL E</td><td>CLL/IDU EAST HOU ALL</td><td>A</td></tr>
+                            <tr><td>40</td><td>CLL E A</td><td>CLL/IDU EAST HOU ALL ALT</td><td>A</td></tr>
+                            <tr><td>41</td><td>CLL W</td><td>CLL/IDU WEST/15/33 HOU ALL</td><td>A</td></tr>
+                            <tr><td>42</td><td>CLL W A</td><td>CLL/IDU WEST/15/33 HOU ALL ALT</td><td>A</td></tr>
+                            <tr><td>46</td><td>CLL FN</td><td>CLL FINAL NORTH</td><td>A</td></tr>
+                            <tr><td>47</td><td>CLL FS</td><td>CLL FINAL SOUTH</td><td>A</td></tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
             <button class="collapsible"><span class="arrow">►</span> SIDs & STARs</button>
@@ -422,7 +927,7 @@
                     </table>
                 </div>
                 
-                <button class="collapsible"><span class="arrow">►</span> IAH STARs (East & Gulf Arrival)</button>
+                <button class="collapsible"><span class="arrow">►</span> IAH STARs - East & Gulf Arrival (I90_D/I90_G)</button>
                 <div class="content">
                     <table>
                         <thead>
@@ -444,7 +949,7 @@
                     </table>
                 </div>
 
-                <button class="collapsible"><span class="arrow">►</span> IAH STARs (West & Eagle Lake Arrival)</button>
+                <button class="collapsible"><span class="arrow">►</span> IAH STARs - West & Eagle Lake Arrival (I90_N/X)</button>
                 <div class="content">
                     <table>
                         <thead>
@@ -1021,6 +1526,7 @@
             </tbody>
         </table>
     </div>
+</div>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -1071,6 +1577,10 @@
             }
         }
     }
+
+    function resetPage() {
+            window.location.reload();
+        }
 
     function highlightText(element, query) {
         var textNodes = getTextNodes(element);
