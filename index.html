@@ -11,7 +11,7 @@
 <div class="header">
     <img src="images/zhu-logo.png" style="float: left; width: 100px; margin-right: 10px; border-radius: 10px;">
     <h2 style="margin-top: 0; margin-bottom: -10px;">RVM Reference</h2>
-    <p>Updated: August 1, 2024
+    <p>Updated: October 30, 2024
     <br><span class="code">CTRL+F2 > type desired map # > ENTER</span></p>
 
     <p><input type="text" class="search" id="searchBox" placeholder="I90_D, MVA, Final, etc...">&nbsp;
@@ -901,7 +901,7 @@
 
             <button class="collapsible"><span class="arrow">►</span> SIDs & STARs</button>
             <div class="content">
-                <button class="collapsible"><span class="arrow">►</span> I90 SIDs</button>
+                <button class="collapsible"><span class="arrow">►</span> SIDs</button>
                 <div class="content">
                     <table>
                         <thead>
@@ -932,11 +932,19 @@
                     </table>
                 </div>
                 
-                <button class="collapsible"><span class="arrow">►</span> IAH STARs - East & Gulf Arrival (I90_D/I90_G)</button>
+                <button class="collapsible"><span class="arrow">►</span> STARs <span style="font-style: italic;">&nbsp;(NEW!)</span></button>
                 <div class="content">
                     <table>
                         <thead>
                             <tr>
+                                <th colspan="4" bgcolor="#25337b">IAH WEST FLOW</th>
+                                <th colspan="4" bgcolor="#25337b">IAH EAST FLOW</th>
+                            </tr>
+                            <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
                                 <th>Map #</th>
                                 <th>Short Name</th>
                                 <th>Long Name</th>
@@ -944,21 +952,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>203</td><td>I90169</td><td>IAH STARS EAST FLOW ALL</td><td>B</td></tr>
-                            <tr><td>204</td><td>I90171</td><td>IAH STARS EAST FLOW STARS ONLY</td><td>B</td></tr>
-                            <tr><td>205</td><td>I90170</td><td>IAH STARS EAST FLOW LABELS</td><td>B</td></tr>
-                            <tr><td>206</td><td>I90174</td><td>IAH STARS WEST FLOW ALL</td><td>B</td></tr>
-                            <tr><td>207</td><td>I90172</td><td>IAH STARS WEST FLOW STARS ONLY</td><td>B</td></tr>
-                            <tr><td>208</td><td>I90173</td><td>IAH STARS WEST FLOW LABELS</td><td>B</td></tr>
+                            <tr><td>401</td><td>DRLLR</td><td>I90 DRLLR RNAV STAR</td><td>B</td><td>400</td><td>DOOBI</td><td>I90 DOOBI RNAV STAR</td><td>B</td></tr>
+                            <tr><td>402</td><td>GESNR</td><td>I90 GESNR RNAV STAR</td><td>B</td><td>403</td><td>GUSHR</td><td>I90 GUSHR RNAV STAR</td><td>B</td></tr>
+                            <tr><td>406</td><td>MSCOT</td><td>I90 MSCOT RNAV STAR</td><td>B</td><td>404</td><td>HTOWN</td><td>I90 HTOWN RNAV STAR</td><td>B</td></tr>
+                            <tr><td>407</td><td>NNCEE</td><td>I90 NNCEE RNAV STAR</td><td>B</td><td>405</td><td>LINKK</td><td>I90 LINKK RNAV STAR</td><td>B</td></tr>
+                            <tr><td>409</td><td>SOULL</td><td>I90 SOULL RNAV STAR</td><td>B</td><td>408</td><td>SKNRD</td><td>I90 SKNRD RNAV STAR</td><td>B</td></tr>
+                            <tr><td>410</td><td>TEJAS</td><td>I90 TEJAS RNAV STAR</td><td>B</td><td>411</td><td>TTORO</td><td>I90 TTORO RNAV STAR</td><td>B</td></tr>
+                            <tr><td>412</td><td>ZEEKK</td><td>I90 ZEEKK RNAV STAR</td><td>B</td><td></td><td></td><td></td><td></td></tr>
                         </tbody>
                     </table>
-                </div>
 
-                <button class="collapsible"><span class="arrow">►</span> IAH STARs - West & Eagle Lake Arrival (I90_N/X)</button>
-                <div class="content">
                     <table>
                         <thead>
+                            <tr><th colspan="4" bgcolor="#25337b">HOU ALL FLOWS</th><th colspan="4" bgcolor="#25337b">SATELLITE AIRPORTS</th></tr>
                             <tr>
+                                <th>Map #</th>
+                                <th>Short Name</th>
+                                <th>Long Name</th>
+                                <th>Brite Group</th>
                                 <th>Map #</th>
                                 <th>Short Name</th>
                                 <th>Long Name</th>
@@ -966,20 +977,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>209</td><td>I90186</td><td>IAH STARS EAST FLOW ALL</td><td>B</td></tr>
-                            <tr><td>210</td><td>I90184</td><td>IAH STARS EAST FLOW STARS ONLY</td><td>B</td></tr>
-                            <tr><td>211</td><td>I90185</td><td>IAH STARS EAST FLOW LABELS</td><td>B</td></tr>
-                            <tr><td>212</td><td>I90189</td><td>IAH STARS WEST FLOW ALL</td><td>B</td></tr>
-                            <tr><td>213</td><td>I90187</td><td>IAH STARS WEST FLOW STARS ONLY</td><td>B</td></tr>
-                            <tr><td>214</td><td>I90188</td><td>IAH STARS WEST FLOW STARS LABELS</td><td>B</td></tr>
+                            <tr><td>413</td><td>BAYYY</td><td>I90 BAYYY RNAV STAR</td><td>B</td><td>418</td><td>BAZBL</td><td>I90 BAZBL RNAV STAR</td><td>B</td></tr>
+                            <tr><td>414</td><td>BELLR</td><td>I90 BELLR RNAV STAR</td><td>B</td><td>419</td><td>CESAN</td><td>I90 CESAN RNAV STAR</td><td>B</td></tr>
+                            <tr><td>415</td><td>KIDDZ</td><td>I90 KIDDZ RNAV STAR</td><td>B</td><td>420</td><td>PIEGY</td><td>I90 PIEGY RNAV STAR</td><td>B</td></tr>
+                            <tr><td>416</td><td>PUCKS</td><td>I90 PUCKS RNAV STAR</td><td>B</td><td>421</td><td>SNDAY</td><td>I90 SNDAY RNAV STAR</td><td>B</td></tr>
+                            <tr><td>417</td><td>TKNIQ</td><td>I90 TKNIQ RNAV STAR</td><td>B</td><td>422</td><td>WAPPL</td><td>I90 WAPPL RNAV STAR</td><td>B</td></tr>
                         </tbody>
                     </table>
-                </div>
 
-                <button class="collapsible"><span class="arrow">►</span> Hobby STARs</button>
-                <div class="content">
                     <table>
                         <thead>
+                            <tr><th colspan="4" bgcolor="#25337b">CONVENTIONAL STARS</tr>
                             <tr>
                                 <th>Map #</th>
                                 <th>Short Name</th>
@@ -988,56 +996,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>215</td><td>I90192</td><td>HOU STARS RWY 4</td><td>B</td></tr>
-                            <tr><td>216</td><td>I90190</td><td>HOU STARS RWY 4 STARS ONLY</td><td>B</td></tr>
-                            <tr><td>217</td><td>I90191</td><td>HOU STARS RWY 4 LABEL/REST</td><td>B</td></tr>
-                            <tr><td>218</td><td>I90195</td><td>HOU STARS RWY 13</td><td>B</td></tr>
-                            <tr><td>219</td><td>I90193</td><td>HOU STARS RWY 13 STARS ONLY</td><td>B</td></tr>
-                            <tr><td>220</td><td>I90194</td><td>HOU STARS RWY 13 LABEL/REST</td><td>B</td></tr>
-                            <tr><td>221</td><td>I90198</td><td>HOU STARS RWY 22</td><td>B</td></tr>
-                            <tr><td>222</td><td>I90196</td><td>HOU STARS RWY 22 STARS ONLY</td><td>B</td></tr>
-                            <tr><td>223</td><td>I90197</td><td>HOU STARS RWY 22 LABEL/REST</td><td>B</td></tr>
-                            <tr><td>224</td><td>I90201</td><td>HOU STARS RWY 31</td><td>B</td></tr>
-                            <tr><td>225</td><td>I90199</td><td>HOU STARS RWY 31 STARS ONLY</td><td>B</td></tr>
-                            <tr><td>226</td><td>I90200</td><td>HOU STARS RWY 31 LABEL/REST</td><td>B</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <button class="collapsible"><span class="arrow">►</span> Conventional STARs</button>
-                <div class="content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Map #</th>
-                                <th>Short Name</th>
-                                <th>Long Name</th>
-                                <th>Brite Group</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>227</td><td>CONSTAR1</td><td>CONV STARS ALL FLOWS</td><td>B</td></tr>
-                            <tr><td>228</td><td>CONSTAR2</td><td>CONV STARS ALL FLOW STARS ONLY</td><td>B</td></tr>
-                            <tr><td>229</td><td>CONSTAR3</td><td>CONV STARS ALL FLOW LABEL/REST</td><td>B</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <button class="collapsible"><span class="arrow">►</span> Statellite STARs</button>
-                <div class="content">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Map #</th>
-                                <th>Short Name</th>
-                                <th>Long Name</th>
-                                <th>Brite Group</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>230</td><td>SATSTAR1</td><td>SAT STARS ALL FLOWS</td><td>B</td></tr>
-                            <tr><td>231</td><td>SATSTAR2</td><td>SAT STARS ALL FLOWS STARS ONLY</td><td>B</td></tr>
-                            <tr><td>232</td><td>SATSTAR3</td><td>SAT STARS ALL FLOWS LABELS/REST</td><td>B</td></tr>
+                            <tr><td>423</td><td>CONSTAR</td><td>I90 CONV STAR ALL</td><td>B</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -1060,7 +1019,117 @@
                         </tbody>
                     </table>
                 </div>
+
+            <button class="collapsible"><span class="arrow">►</span> IAH STARs - East & Gulf Arrival <span style="font-style: italic;">&nbsp;(Potentially depreciated soon)</span></button>
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Map #</th>
+                            <th>Short Name</th>
+                            <th>Long Name</th>
+                            <th>Brite Group</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>203</td><td>I90169</td><td>IAH STARS EAST FLOW ALL</td><td>B</td></tr>
+                        <tr><td>204</td><td>I90171</td><td>IAH STARS EAST FLOW STARS ONLY</td><td>B</td></tr>
+                        <tr><td>205</td><td>I90170</td><td>IAH STARS EAST FLOW LABELS</td><td>B</td></tr>
+                        <tr><td>206</td><td>I90174</td><td>IAH STARS WEST FLOW ALL</td><td>B</td></tr>
+                        <tr><td>207</td><td>I90172</td><td>IAH STARS WEST FLOW STARS ONLY</td><td>B</td></tr>
+                        <tr><td>208</td><td>I90173</td><td>IAH STARS WEST FLOW LABELS</td><td>B</td></tr>
+                    </tbody>
+                </table>
             </div>
+
+            <button class="collapsible"><span class="arrow">►</span> IAH STARs - West & Eagle Lake Arrival <span style="font-style: italic;">&nbsp;(Potentially depreciated soon)</span></button>
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Map #</th>
+                            <th>Short Name</th>
+                            <th>Long Name</th>
+                            <th>Brite Group</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>209</td><td>I90186</td><td>IAH STARS EAST FLOW ALL</td><td>B</td></tr>
+                        <tr><td>210</td><td>I90184</td><td>IAH STARS EAST FLOW STARS ONLY</td><td>B</td></tr>
+                        <tr><td>211</td><td>I90185</td><td>IAH STARS EAST FLOW LABELS</td><td>B</td></tr>
+                        <tr><td>212</td><td>I90189</td><td>IAH STARS WEST FLOW ALL</td><td>B</td></tr>
+                        <tr><td>213</td><td>I90187</td><td>IAH STARS WEST FLOW STARS ONLY</td><td>B</td></tr>
+                        <tr><td>214</td><td>I90188</td><td>IAH STARS WEST FLOW STARS LABELS</td><td>B</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="collapsible"><span class="arrow">►</span> Hobby STARs <span style="font-style: italic;">&nbsp;(Potentially depreciated soon)</span></button>
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Map #</th>
+                            <th>Short Name</th>
+                            <th>Long Name</th>
+                            <th>Brite Group</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>215</td><td>I90192</td><td>HOU STARS RWY 4</td><td>B</td></tr>
+                        <tr><td>216</td><td>I90190</td><td>HOU STARS RWY 4 STARS ONLY</td><td>B</td></tr>
+                        <tr><td>217</td><td>I90191</td><td>HOU STARS RWY 4 LABEL/REST</td><td>B</td></tr>
+                        <tr><td>218</td><td>I90195</td><td>HOU STARS RWY 13</td><td>B</td></tr>
+                        <tr><td>219</td><td>I90193</td><td>HOU STARS RWY 13 STARS ONLY</td><td>B</td></tr>
+                        <tr><td>220</td><td>I90194</td><td>HOU STARS RWY 13 LABEL/REST</td><td>B</td></tr>
+                        <tr><td>221</td><td>I90198</td><td>HOU STARS RWY 22</td><td>B</td></tr>
+                        <tr><td>222</td><td>I90196</td><td>HOU STARS RWY 22 STARS ONLY</td><td>B</td></tr>
+                        <tr><td>223</td><td>I90197</td><td>HOU STARS RWY 22 LABEL/REST</td><td>B</td></tr>
+                        <tr><td>224</td><td>I90201</td><td>HOU STARS RWY 31</td><td>B</td></tr>
+                        <tr><td>225</td><td>I90199</td><td>HOU STARS RWY 31 STARS ONLY</td><td>B</td></tr>
+                        <tr><td>226</td><td>I90200</td><td>HOU STARS RWY 31 LABEL/REST</td><td>B</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="collapsible"><span class="arrow">►</span> Conventional STARs <span style="font-style: italic;">&nbsp;(Potentially depreciated soon)</span></button>
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Map #</th>
+                            <th>Short Name</th>
+                            <th>Long Name</th>
+                            <th>Brite Group</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>227</td><td>CONSTAR1</td><td>CONV STARS ALL FLOWS</td><td>B</td></tr>
+                        <tr><td>228</td><td>CONSTAR2</td><td>CONV STARS ALL FLOW STARS ONLY</td><td>B</td></tr>
+                        <tr><td>229</td><td>CONSTAR3</td><td>CONV STARS ALL FLOW LABEL/REST</td><td>B</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <button class="collapsible"><span class="arrow">►</span> Statellite STARs <span style="font-style: italic;">&nbsp;(Potentially depreciated soon)</span></button>
+            <div class="content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Map #</th>
+                            <th>Short Name</th>
+                            <th>Long Name</th>
+                            <th>Brite Group</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>230</td><td>SATSTAR1</td><td>SAT STARS ALL FLOWS</td><td>B</td></tr>
+                        <tr><td>231</td><td>SATSTAR2</td><td>SAT STARS ALL FLOWS STARS ONLY</td><td>B</td></tr>
+                        <tr><td>232</td><td>SATSTAR3</td><td>SAT STARS ALL FLOWS LABELS/REST</td><td>B</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
             <button class="collapsible"><span class="arrow">►</span> Helicopter/Airshow/PAJA</button>
             <div class="content">
